@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -62,8 +63,8 @@ public class Main2Activity extends AppCompatActivity implements LoaderManager.Lo
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-//        Toolbar appBar = (Toolbar) findViewById(R.id.app_bar);
-//        setSupportActionBar(appBar);
+        Toolbar appBar = (Toolbar) findViewById(R.id.app_bar);
+        setSupportActionBar(appBar);
 
         Bundle i = getIntent().getExtras();
         selected = i.getString("coinType");
